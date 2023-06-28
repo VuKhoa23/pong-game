@@ -1,0 +1,15 @@
+#gameBoard {
+  border: 1px solid black;
+  flex: 1;
+}
+
+#gameContainer {
+  width: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+#scoreField {
+  font-size: 60px;
+  margin: auto;
+}
