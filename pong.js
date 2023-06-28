@@ -96,14 +96,16 @@ function movePaddles(identifier, direction) {
 function checkPaddleCollision() {
     if (ballX - ballRadius <= paddle1.x + paddleWidth &&
         ballY >= paddle1.y && ballY <= paddle1.y + paddleHeight) {
+        ballX = paddleWidth + ballRadius;
         ballDirectionX *= -1;
-        ballTransition += 5;
+        ballTransition += 3;
 
     }
     if (ballX + ballRadius >= boardWidth - paddleWidth &&
         ballY >= paddle2.y && ballY <= paddle2.y + paddleHeight) {
+        ballX = boardWidth - paddleWidth - ballRadius;
         ballDirectionX *= -1;
-        ballTransition += 5;
+        ballTransition += 3;
 
     }
 }
